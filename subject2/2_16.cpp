@@ -28,7 +28,9 @@ int main() {
         return -1;
     }
 
-    int matrix[rows][cols];
+    int matrix[rows][cols]; // Этой конструкции нет в стандарте, но некоторые компиляторы ее поддерживают
+    // (Variable Length Array, VLA) 
+    // соответственно в следующих заданиях возможна такая же ошибка
 
     int max_row;
     int minimal = 1000000;

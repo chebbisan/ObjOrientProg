@@ -58,8 +58,8 @@ bool can_take(char* your, char* opponent, char piece) {
 // R - rook, B - bishop, N - knight, Q - queen
 
 int main() {
-    char* your_coordinate = new char[2];
-    char* opponent_coordinate = new char[2];
+    char your_coordinate[2];
+    char opponent_coordinate[2];
     char piece;
     std::cout << "Write coordinate for your piece: ";
     std::cin >> your_coordinate;
@@ -73,7 +73,5 @@ int main() {
         std::cout << "You can't take your opponent's piece :(\n";
     }
 
-    delete[] your_coordinate;
-    delete[] opponent_coordinate;
     return 0;
 }

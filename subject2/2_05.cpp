@@ -23,19 +23,6 @@ bool can_take(char* your, char* opponent, char piece) {
     opp_col = opponent[0] - 'a' + 1;
     opp_row = opponent[1] - '0';
 
-    // if(!is_valid(your_col))
-    //     std::cout << "Coordinates are not valid\n";
-    //     return false;
-    // if(!is_valid(your_row))
-    //     std::cout << "Coordinates are not valid\n";
-    //     return false;
-    // if(!is_valid(opp_col))
-    //     std::cout << "Coordinates are not valid\n";
-    //     return false;
-    // if(!is_valid(opp_row))
-    //     std::cout << "Coordinates are not valid\n";
-    //     return false;
-
 
     switch (piece)
     {

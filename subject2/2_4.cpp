@@ -1,6 +1,12 @@
+
+/*
+Задание 2.4. Уравнение до 2-го порядка. Пользователь вводит коэффициенты
+уравнения вида ax 2 + bx + c = 0. Программа выводит решение данного
+уравнения. Учтите все возможные комбинации коэффициентов.
+*/
+
 #include <iostream>
 #include <cmath>
-#include <string>
 
 std::string solve(double a, double b, double c) {
     double discriminant = b * b - 4 * a * c;

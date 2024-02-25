@@ -65,7 +65,7 @@ int main() {
     std::cin >> your_coordinate;
     std::cout << "Write coordinate for your opponent's piece: ";
     std::cin >> opponent_coordinate;
-    std::cout << "What piece you want to check? (R - rook, B - bishop, N - knight, Q - queen)\n";
+    std::cout << "What piece do you want to check? (R - rook, B - bishop, N - knight, Q - queen)\n";
     std::cin >> piece;
     if (can_take(your_coordinate, opponent_coordinate, piece)) {
         std::cout << "You can take your opponent's piece!\n";

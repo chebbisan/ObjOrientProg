@@ -17,6 +17,7 @@ std::string solve(double a, double b, double c) {
         double x = -b / (2 * a);
         return "The root is " + std::to_string(x) + "\n";
     }
+    // if (discriminant < 0) sdelat'
     double x1 = (-b - sqrt(discriminant)) / (2 * a);
     double x2 = (-b + sqrt(discriminant)) / (2 * a);
     return "The roots are " + std::to_string(x1) + " and " + std::to_string(x2) + "\n";

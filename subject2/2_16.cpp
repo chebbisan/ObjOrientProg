@@ -28,7 +28,10 @@ int main() {
         return -1;
     }
 
-    int matrix[rows][cols];
+    int** matrix = new int*[rows];
+    for (int i = 0; i < rows; ++i) {
+        matrix[i] = new int[cols];
+    }
 
     int max_row;
     int minimal = 1000000;
@@ -49,6 +52,11 @@ int main() {
         }
     }
     std::cout << "Minimal value (among max by row): " << minimal << '\n';
+    for (int i = 0; i < rows; ++i) {
+        delete[] matrix[i];
+    }
+    delete[] matrix;
+
     return 0;
     
 }

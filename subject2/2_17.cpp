@@ -27,7 +27,10 @@ int main() {
         return -1;
     }
 
-    int matrix[rows][rows];
+    int** matrix = new int*[rows];
+    for (int i = 0; i < rows; ++i) {
+        matrix[i] = new int[rows];
+    }
 
     for (int i = 0; i < rows; ++i) {
         std::cout << "[ ";
@@ -52,6 +55,10 @@ int main() {
     }
 
     std::cout << '\n';
+    for (int i = 0; i < rows; ++i) {
+        delete[] matrix[i];
+    }
+    delete[] matrix;
     return 0;
     
 }

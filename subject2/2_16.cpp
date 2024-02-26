@@ -51,6 +51,7 @@ int main() {
             minimal = max_row;
         }
     }
+    
     std::cout << "Minimal value (among max by row): " << minimal << '\n';
     for (int i = 0; i < rows; ++i) {
         delete[] matrix[i];

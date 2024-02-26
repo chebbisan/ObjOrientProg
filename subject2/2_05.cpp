@@ -23,19 +23,6 @@ bool can_take(char* your, char* opponent, char piece) {
     opp_col = opponent[0] - 'a' + 1;
     opp_row = opponent[1] - '0';
 
-    // if(!is_valid(your_col))
-    //     std::cout << "Coordinates are not valid\n";
-    //     return false;
-    // if(!is_valid(your_row))
-    //     std::cout << "Coordinates are not valid\n";
-    //     return false;
-    // if(!is_valid(opp_col))
-    //     std::cout << "Coordinates are not valid\n";
-    //     return false;
-    // if(!is_valid(opp_row))
-    //     std::cout << "Coordinates are not valid\n";
-    //     return false;
-
 
     switch (piece)
     {
@@ -71,14 +58,14 @@ bool can_take(char* your, char* opponent, char piece) {
 // R - rook, B - bishop, N - knight, Q - queen
 
 int main() {
-    char* your_coordinate = new char[2];
-    char* opponent_coordinate = new char[2];
+    char your_coordinate[2];
+    char opponent_coordinate[2];
     char piece;
     std::cout << "Write coordinate for your piece: ";
     std::cin >> your_coordinate;
     std::cout << "Write coordinate for your opponent's piece: ";
     std::cin >> opponent_coordinate;
-    std::cout << "What piece you want to check? (R - rook, B - bishop, N - knight, Q - queen)\n";
+    std::cout << "What piece do you want to check? (R - rook, B - bishop, N - knight, Q - queen)\n";
     std::cin >> piece;
     if (can_take(your_coordinate, opponent_coordinate, piece)) {
         std::cout << "You can take your opponent's piece!\n";
@@ -86,7 +73,5 @@ int main() {
         std::cout << "You can't take your opponent's piece :(\n";
     }
 
-    delete[] your_coordinate;
-    delete[] opponent_coordinate;
     return 0;
 }

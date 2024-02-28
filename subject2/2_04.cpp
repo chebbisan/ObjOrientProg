@@ -8,16 +8,23 @@
 #include <iostream>
 #include <cmath>
 
+struct complex {
+    double Re, Im;
+};
+
 std::string solve(double a, double b, double c) {
     double discriminant = b * b - 4 * a * c;
     if (discriminant < 0) {
-        return "No real roots\n";
+        complex comp;
+        comp.Re = -b / (2 * a);
+        comp.Im = sqrt(abs(discriminant)) / (2 * a);
+        return "The roots are " + std::to_string(comp.Re) + " ± " + std::to_string(comp.Im) + "i\n";
+        
     }
-    if (discriminant == 0) {
+    else if (discriminant == 0) {
         double x = -b / (2 * a);
         return "The root is " + std::to_string(x) + "\n";
     }
-    // if (discriminant < 0) sdelat'
     double x1 = (-b - sqrt(discriminant)) / (2 * a);
     double x2 = (-b + sqrt(discriminant)) / (2 * a);
     return "The roots are " + std::to_string(x1) + " and " + std::to_string(x2) + "\n";

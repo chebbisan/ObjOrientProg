@@ -4,6 +4,12 @@
 
 #define N 20
 
+/*
+Написать функцию int* getMaxElem (int* arr, size_t arrSize) которая
+возвращает указатель на максимальный элемент в массиве arr. Проверить
+правильность выполнения в main.
+*/
+
 int random_() {
     return 1 + std::rand() % 100;
 }

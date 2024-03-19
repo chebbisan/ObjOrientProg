@@ -68,7 +68,7 @@ void delete_list(StudentList* sl) {
     sl = nullptr;
 }
 
-void print(StudentList* sl) {
+void display(StudentList* sl) {
     StudentList* current = sl;
     std::cout << "Student list (name, mark, date):\n";
     while (current != nullptr) {
@@ -182,6 +182,25 @@ void sort_name(StudentList*& sl);
 
 void swap(size_t indexA, size_t indexB);
 
+void displayName(StudentList* sl) {
+    StudentList* current = sl;
+    std::cout << "Student list (name, mark, date):\n";
+    while (current != nullptr) {
+        std::cout << current->name << '\n';
+        current = current->next;
+    }
+    std::cout << '\n';
+}
+
+void displayDate(StudentList* sl) {
+    StudentList* current = sl;
+    std::cout << "Student list (name, mark, date):\n";
+    while (current != nullptr) {
+        std::cout << current->date << '\n';
+        current = current->next;
+    }
+    std::cout << '\n';
+}
 
 int main() {
     StudentList* diary = new StudentList;
@@ -211,16 +230,10 @@ int main() {
     push_back(diary, scnd);
     push_back(diary, thrd);
     push_back(diary, frth);
-    print(diary);
+    display(diary);
 
-    
-
-    // erase(diary, 2);
-    // print(diary); 
-
-    print(diary);
-
-
+    erase(diary, 0);
+    display(diary);
 
     delete_list(diary);
     return 0;
